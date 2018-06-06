@@ -58,15 +58,7 @@ class App extends Component {
 
 
     render() {
-
-      const style = {
-        backgroundColor: 'green',
-        font : 'Helvetica',
-        border:'1px solid',
-        padding : '10px',
-        color:'white',
-        cursor:'pointer',
-      }
+      let btnClass='';
 
       let persons = null;
       if(this.state.showPersons){
@@ -85,7 +77,7 @@ class App extends Component {
 
         </div>  );
 
-    style.backgroundColor = 'red';
+ btnClass = classes.Red;
 
           
         }
@@ -105,8 +97,8 @@ class App extends Component {
       <div className={classes.App}>
 
       <h3>Hellow</h3>
-      
-      <button style={style} onClick={this.togglePersonsHandler}>Switch Name</button>
+      <p className={assignClasses.join(' ')}>Lorem ipsum is a dummy text</p>
+      <button className={btnClass} onClick={this.togglePersonsHandler}>Switch Name</button>
        
        {persons}
 
