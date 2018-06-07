@@ -16,6 +16,22 @@ class Persons extends Component{
         console.log('[Persons.js] Inside componentDidMount()');
       }
     
+      componentWillReceiveProps(nextProps){
+        console.log('[Update Persons.js] Inside componentWillReccieveProps', nextProps);
+      }
+
+      shouldComponentUpdate(nextProps , nextState){
+        console.log('[Update Persons.js] Inside shouldComponentUpdate', nextProps, nextState);
+        return nextProps.persons !== this.props.persons;
+      }
+
+      componentWillUpdate(nextProps,nextState){
+        console.log('[Update Person.js Inside componentWilllUpdate',nextProps,nextState);
+      }
+
+      componentDidUpdate(){
+        console.log('[Update Person.js Inside componentDidUpdate');
+      }
 
 
 
