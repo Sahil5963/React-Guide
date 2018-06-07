@@ -14,7 +14,7 @@ console.log('[App.js] Inside Constructor', props);
         { id:'p2', name:"Shanky", age:20},
         { id:'p3', name:"Rajan", age:18},
       ],
-      showPersons  : true
+      showPersons  : false
     }
 
   }
