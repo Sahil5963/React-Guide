@@ -15,7 +15,8 @@ console.log('[App.js] Inside Constructor', props);
         { id:'p2', name:"Shanky", age:20},
         { id:'p3', name:"Rajan", age:18},
       ],
-      showPersons  : false
+      showPersons  : false,
+      toggleClicked:0
     }
 
   }
@@ -92,6 +93,13 @@ console.log('[App.js] Inside Constructor', props);
 
         const doesShow = this.state.showPersons;
         this.setState({showPersons: !doesShow});
+        this.setState((prevState,props)=>{
+          return{
+            showPersons: !doesShow,
+            toggleClicked:prevState.toggleClicked + 1
+          }
+          
+        });
 
       }
 
