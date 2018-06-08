@@ -2,17 +2,17 @@
     text-align: center;
 }
 
-.red{
+.Red{
     color:red;
 
 }
 
-.bold{
+.Bold{
     font-weight: 700;
 }
 
 
-.Cockpit button{
+.Button{
     background-color:green;
         font : Helvetica;
         border:1px solid;
@@ -21,16 +21,16 @@
         cursor:pointer;
 }
 
-.Cockpit button:hover{
+.Button:hover{
     box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
     color: black;
     background-color: white;
 }
 
-.Cockpit button.Red{
+.Button.Red{
     background-color: red;
 }
-.Cockpit button.Red:hover{
+.Button.Red:hover{
     background-color: salmon;
     color:black;
 }

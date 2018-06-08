@@ -2,7 +2,8 @@ import React, { PureComponent } from 'react';
 import classes from './App.css';
 import Persons from  '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
-
+import Aux from '../hoc/Auxy';
+import withClass from '../hoc/withClass';
 class App extends PureComponent {
 
   constructor(props){
@@ -119,7 +120,7 @@ console.log('[App.js] Inside Constructor', props);
 
     return (
       
-      <div className={classes.App}>
+      <Aux>
       <button onClick={()=>{this.setState({showPersons:true})}}>Show Person</button>
 <Cockpit showPersons={this.state.showPersons}
          persons={this.state.persons}
@@ -134,10 +135,10 @@ console.log('[App.js] Inside Constructor', props);
       <div className="box">
       </div>
       
-     
+      </Aux>
 
 
-      </div>
+      
       
 
 
@@ -145,4 +146,4 @@ console.log('[App.js] Inside Constructor', props);
   }
 }
 
-export default App;
+export default withClass(App , classes.App);
